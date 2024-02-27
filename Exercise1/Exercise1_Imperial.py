@@ -3,18 +3,19 @@ Exercise 1
 GE 120
 Andrea Imperial
 """
-dms = 118.42069
+dd = 118.42069
+print("Input:", dd)
 
 #get degrees part
-degree = int(dms)
+degree = int(dd)
 
 #get minutes part
-minutes_whole = (dms - degree) * 60
+minutes_whole = (dd - degree) * 60
 
-#get integer of minutes
+#get minutes integer
 minutes_int = int(minutes_whole)
 
-#get seconds
+#get seconds value
 seconds = (minutes_whole - minutes_int) * 60
 
 #put in proper format for submission
