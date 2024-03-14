@@ -13,7 +13,8 @@ while True:
     azimuth = float(input("Azimuth from the South: "))%360
 
     if "-" in azimuth: #in DMS
-        degree, minutes, seconds 
+        degrees, minutes, seconds = azimuth.split("-")
+        zimurh = (int(degrees) + (int(minutes)/60) + (float(seconds)/3600))%360
         #convert DD to DMS
     else:
         azimuth = float(azimuth%360)
@@ -26,15 +27,15 @@ while True:
         bearing = 'N {:^10} E'.format(azimuth - 180)
     elif azimuth < 360:
         bearing = 'S {:^10} E'.format(360 - azimuth)
-    elif azimuth = 0
+    elif azimuth == 0:
         bearing = "DUE SOUTH"
-    elif azimuth = 90
+    elif azimuth == 90:
         bearing = "DUE WEST"
-    elif azimuth = 180
+    elif azimuth == 180:
         bearing = "DUE NORTH"
-    elif azimuth = 270
+    elif azimuth == 270:
         bearing = "DUE EAST"
-    elif azimuth = 360
+    elif azimuth == 360:
         bearing = "DUE SOUTH"
 
     line = (counter, distance, azimuth) #create tuple of the line
@@ -50,6 +51,6 @@ while True:
 print("\n\LINES")
 
 for line in lines:
-    print('{: ^} {} {}'.format(line{0}, line{1},line))
+    print('{} {} {}'.format(line[0], line[1],line[2]))
 
     print("-----END-----")
