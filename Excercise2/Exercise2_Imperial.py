@@ -11,10 +11,11 @@ while True:
     print("LINE NO.", counter)
     distance = input("Distance: ")
     azimuth = float(input("Azimuth from the South: "))%360
+    #input of values
 
     if "-" in azimuth: #in DMS
         degrees, minutes, seconds = azimuth.split("-")
-        zimurh = (int(degrees) + (int(minutes)/60) + (float(seconds)/3600))%360
+        azimuth = (int(degrees) + (int(minutes)/60) + (float(seconds)/3600))%360
         #convert DD to DMS
     else:
         azimuth = float(azimuth%360)
@@ -41,14 +42,14 @@ while True:
     line = (counter, distance, azimuth) #create tuple of the line
     lines.append(line)
 
-    yn = input("Add new line? ")
+    yn = input("Add a new line? ")
     if yn.lower() == "yes" or yn.lower() == "y":
         counter = counter + 1
         continue
     else:
         break
 
-print("\n\LINES")
+print("\n\nMGALINES")
 
 for line in lines:
     print('{} {} {}'.format(line[0], line[1],line[2]))

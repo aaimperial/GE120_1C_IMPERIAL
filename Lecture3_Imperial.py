@@ -1,23 +1,23 @@
-# Lecture 3 Notes
+# # Lecture 3 Notes
 
-listahan = ["red", "yellow", "green", "blue"]
-print(listahan)
+# listahan = ["red", "yellow", "green", "blue"]
+# print(listahan)
 
-# to get green (position)
-print(listahan[2])
+# # to get green (position)
+# print(listahan[2])
 
-# to get a subset of the list, red and yellow
-print(listahan[0:2])
+# # to get a subset of the list, red and yellow
+# print(listahan[0:2])
 
-# 
+# # 
 
-# start from index 
-
-
+# # start from index 
 
 
-# #gets first item, last item, then those in between
-# print
+
+
+# # #gets first item, last item, then those in between
+# # print
 
 # # Addition of lists
 # print(listahan[0:2]+listahan[2:4])
@@ -137,3 +137,7 @@ print(listahan[0:2])
 
 # print("PASOK NA REC")
 # print("-----END-----")
+
+
+intro = input('Enter intro: ')
+print(intro)
